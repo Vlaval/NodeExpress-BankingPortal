@@ -4,6 +4,11 @@
     <h1><%= title %></h1>
     <a href="/profile">Profile</a>
 </div>
+
+<% Object.keys(accounts).forEach( account => { %>
+    <%- include('summary.ejs', { account: accounts[account] }); %>
+<% }); %>
+
 <br>
 <a href="/transfer">Transfer</a>
 
