@@ -5,9 +5,9 @@
     <a href="/profile">Profile</a>
 </div>
 
-<% Object.keys(accounts).forEach( account => { %>
-    <%- include('summary.ejs', { account: accounts[account] }); %>
-<% }); %>
+<%- include('summary.ejs', { account: accounts.savings }); %>
+<%- include('summary.ejs', { account: accounts.checking }); %>
+<%- include('summary.ejs', { account: accounts.credit }); %>
 
 <br>
 <a href="/transfer">Transfer</a>
